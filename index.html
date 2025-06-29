@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.ico" />
     <link rel="stylesheet" href="style.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,8 +20,8 @@
         <li class="home">
           <a href="#"><img src="logo.svg" /></a>
         </li>
-        <li><a href="#">Навіны</a></li>
-        <li><a href="#">Справаздачы</a></li>
+        <!-- <li><a href="#">Навіны</a></li>
+        <li><a href="#">Справаздачы</a></li> -->
         <li><a href="#">Кантакты</a></li>
         <li class="accent-link"><a href="#">Падтрымаць</a></li>
       </ul>
@@ -40,7 +41,7 @@
         </p>
       </div>
       <div class="about-cards">
-        <div class="card">
+        <div class="card fade">
           <img src="card1-header.svg" />
           <div class="card-text">
             <p class="card-text-header">Наш падыход</p>
@@ -53,6 +54,62 @@
             </p>
           </div>
         </div>
+        <div class="card fade">
+          <img src="card2-header.svg" />
+          <div class="card-text">
+            <p class="card-text-header">Прынцыпы Hexagon</p>
+            <p class="card-text-text">
+              Незалежнасць — мы не будзем залежаць ад грантаў і знешніх
+              фінансавых плыняў. Доўгатэрміновасць — наш фонд пабудаваны так,
+              каб працаваць дзесяцігоддзямі. Разумнае інвеставанне — сродкі
+              размяркоўваюцца максімальна бяспечна, з улікам доўгатэрміновага
+              росту.
+            </p>
+          </div>
+        </div>
+        <div class="card fade">
+          <img src="card3-header.svg" />
+          <div class="card-text">
+            <p class="card-text-header">Нашы мэты і бачанне</p>
+            <p class="card-text-text">
+              Мы ствараем фінансавы механізм, які дазволіць устойліва
+              падтрымліваць ініцыятывы і не залежаць ад вонкавых умоў. У
+              кароткатэрміновай перспектыве мы фарміруем першасны капітал і
+              наладжваем празрысты механізм інвеставання. Далей мы плануем
+              павялічваць капітал фонду і пашыраць колькасць праектаў, якія
+              могуць разлічваць на фінансаванне ад Hexagon.
+            </p>
+          </div>
+        </div>
+        <div class="card-buttons">
+          <a class="card-button" onclick="prevCard()">&#10094;</a>
+          <a class="card-button second-card-button" onclick="nextCard()"
+            >&#10095;</a
+          >
+        </div>
+        <script>
+          let cardIndex = 0;
+          let cards = document.getElementsByClassName("card");
+          for (let i = 1; i < cards.length; i++) {
+            cards[i].style.display = "none";
+          }
+
+          function prevCard() {
+            cards[cardIndex].style.display = "none";
+            if (--cardIndex < 0) {
+              cardIndex = cards.length - 1;
+            }
+            cards[cardIndex].style.display = "flex";
+          }
+
+          function nextCard() {
+            cards[cardIndex].style.display = "none";
+            if (++cardIndex === cards.length) {
+              cardIndex = 0;
+            }
+            cards[cardIndex].style.display = "flex";
+          }
+        </script>
       </div>
     </div>
     <div class="goal">
