@@ -205,9 +205,11 @@ nav a:hover {
 
 .how-it-works {
   background-color: #130606;
-  min-height: 800px;
+  height: 800px;
   display: flex;
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .gradient-top {
@@ -254,8 +256,38 @@ nav a:hover {
   line-height: 150%;
 }
 
-.how-it-works img {
-  padding-right: 100px;
+.how-cards-container {
+  overflow: auto;
+  padding: 20px 100px 20px 0;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.how-card {
+  display: flex;
+  gap: 33px;
+}
+
+.how-card-text {
+  border: 1px solid var(--Gray, #747578);
+  box-shadow: 0px 2px 4px 0px #00000033;
+  color: #747578;
+  border-radius: 30px;
+  padding: 52px 40px;
+  border-width: 1px;
+}
+
+.how-card-text p:nth-child(1) {
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.how-card-text p:nth-child(2) {
+  margin-top: 24px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
 }
 
 .universities {
