@@ -11,12 +11,15 @@ body {
 }
 
 nav {
-  padding: 1rem 8rem 0 4rem;
+  padding-top: min(1em, 2%);
+  padding-right: min(8em, 5%);
+  padding-left: min(8em, 5%);
 }
 
 nav ul {
   list-style: none;
   display: flex;
+  align-items: center;
 }
 
 nav .home {
@@ -27,11 +30,14 @@ nav a {
   color: #130606;
   display: flex;
   text-decoration: none;
-  padding: 1em 2em;
 }
 
 nav a:hover {
   text-decoration: underline;
+}
+
+.contacts-link {
+  margin-right: min(3.5em, 3%);
 }
 
 .hero {
@@ -50,6 +56,7 @@ nav a:hover {
 .accent-link {
   background-color: #d9563a;
   border-radius: 15px;
+  padding: 1em 2em;
 }
 
 .accent-link a {
@@ -147,7 +154,7 @@ nav a:hover {
 
 .fade {
   animation-name: fade;
-  animation-duration: 1s;
+  animation-duration: 1.5s;
 }
 
 @keyframes fade {
