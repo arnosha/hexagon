@@ -12,8 +12,8 @@ body {
 
 nav {
   padding-top: min(1em, 2%);
-  padding-right: min(8em, 5%);
-  padding-left: min(8em, 5%);
+  padding-right: min(8em, 2%);
+  padding-left: min(8em, 2%);
 }
 
 nav ul {
@@ -37,7 +37,7 @@ nav a:hover {
 }
 
 .contacts-link {
-  margin-right: min(3.5em, 3%);
+  margin-right: min(3.5em, 2%);
 }
 
 .hero {
@@ -56,7 +56,11 @@ nav a:hover {
 .accent-link {
   background-color: #d9563a;
   border-radius: 15px;
-  padding: 1em 2em;
+  /* padding: 1em 2em; */
+  padding-top: min(1em, 3%);
+  padding-bottom: min(1em, 3%);
+  padding-right: min(2em, 6%);
+  padding-left: min(2em, 6%);
 }
 
 .accent-link a {
