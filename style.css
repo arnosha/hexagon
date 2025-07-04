@@ -44,9 +44,11 @@ nav a:hover {
   min-height: 400px;
   text-align: center;
   align-content: center;
-  font-size: 64px;
+  /* 64 to 30 px */
+  font-size: clamp(1.875rem, 1.1268rem + 3.1925vw, 4rem);
   font-weight: 500;
-  padding: 0 15rem 0 15rem;
+  padding-right: clamp(1.25rem, -2.8213rem + 17.3709vw, 12.8125rem);
+  padding-left: clamp(1.25rem, -2.8213rem + 17.3709vw, 12.8125rem);
 }
 
 .accent {
@@ -56,7 +58,6 @@ nav a:hover {
 .accent-link {
   background-color: #d9563a;
   border-radius: 15px;
-  /* padding: 1em 2em; */
   padding-top: min(1em, 3%);
   padding-bottom: min(1em, 3%);
   padding-right: min(2em, 6%);
@@ -73,35 +74,57 @@ nav a:hover {
   border-top-left-radius: 100px;
   border-top-right-radius: 100px;
   background-color: #ededed;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto;
+  /* 124 to 80px */
+  padding-top: clamp(5rem, 4.0317rem + 4.1315vw, 7.75rem);
+  /* 100 to 20px */
+  padding-left: clamp(1.25rem, -0.5106rem + 7.5117vw, 6.25rem);
+  padding-right: clamp(1.25rem, -0.5106rem + 7.5117vw, 6.25rem);
 }
 
 .about-text {
-  flex: 1;
   font-family: "Manrope";
   font-style: normal;
   color: #130606;
-  padding-left: 100px;
-  padding-right: 185px;
+  padding-right: 6.5rem;
+  max-width: 54rem;
+}
+
+@media (max-width: 900px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-text {
+    padding-right: 0;
+  }
+
+  .about-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: clamp(3.375rem, 1.5rem + 8vw, 6rem);
+    padding-bottom: 1rem;
+  }
 }
 
 .about-text-header {
-  padding-top: 124px;
   font-weight: 500;
-  font-size: 48px;
-  line-height: 66px;
+  /* 48 to 32px */
+  font-size: clamp(2rem, 1.6479rem + 1.5023vw, 3rem);
+  line-height: 4rem;
 }
 
 .about-text-text {
-  padding-top: 80px;
+  /* 80 to 54px */
+  /* padding-top: 80px; */
+  padding-top: clamp(3.375rem, 2.8028rem + 2.4413vw, 5rem);
   font-weight: 400;
-  font-size: 20px;
-  line-height: 36px;
-}
-
-.about-cards {
-  flex: 1;
-  padding-top: 124px;
+  /* 20 to 14px */
+  font-size: clamp(0.875rem, 0.743rem + 0.5634vw, 1.25rem);
+  /* font-size: 20px; */
+  line-height: 2rem;
 }
 
 .card {
@@ -109,29 +132,42 @@ nav a:hover {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 52px 40px;
-  gap: 60px;
+  /* padding: 52px 40px; */
+  /* 52 to 36px */
+  padding-top: clamp(2.25rem, 1.8979rem + 1.5023vw, 3.25rem);
+  padding-bottom: clamp(2.25rem, 1.8979rem + 1.5023vw, 3.25rem);
+  /* 40 to 32px */
+  padding-right: clamp(2rem, 1.8239rem + 0.7512vw, 2.5rem);
+  padding-left: clamp(2rem, 1.8239rem + 0.7512vw, 2.5rem);
   background: #ffffff;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   border-radius: 30px;
-  width: 500px;
-  height: 515px;
+  /* 500 to 320px */
+  width: clamp(20rem, 16.0387rem + 16.9014vw, 31.25rem);
+  /* 515 to 440px */
+  height: clamp(27.5rem, 25.8495rem + 7.0423vw, 32.1875rem);
+  /* temporary set to 490 instead of 515 */
+  /* 490 to 440px */
+  height: clamp(27.5rem, 26.3996rem + 4.6948vw, 30.625rem);
 }
 
 .card-text {
   font-weight: 700;
-  font-size: 28px;
+  /* 28 to 20 px */
+  font-size: clamp(1.25rem, 1.0739rem + 0.7512vw, 1.75rem);
   line-height: 100%;
   color: #130606;
 }
 
 .card-text-header {
-  padding-bottom: 24px;
+  /* 24 to 20px */
+  padding-bottom: clamp(1.25rem, 1.162rem + 0.3756vw, 1.5rem);
 }
 
 .card-text-text {
   font-weight: 400;
-  font-size: 16px;
+  /* 14 to 16px */
+  font-size: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem);
   line-height: 150%;
 }
 
@@ -189,7 +225,8 @@ nav a:hover {
 
 .goal-text-header {
   font-weight: 500;
-  font-size: 24px;
+  /* 24 to 14 px */
+  font-size: clamp(0.875rem, 0.6549rem + 0.939vw, 1.5rem);
   line-height: 100%;
   border: 1px solid #747578;
   border-radius: 20px;
@@ -199,9 +236,14 @@ nav a:hover {
 
 .goal-text-text {
   font-weight: 300;
-  font-size: 48px;
+  /* 48 to 32px */
+  font-size: clamp(2rem, 1.6479rem + 1.5023vw, 3rem);
   line-height: 100%;
   padding: 60px 200px 0 200px;
+  padding-top: clamp(3.75rem, 3.4859rem + 1.1268vw, 4.5rem);
+  /* padding-bottom: ; */
+  padding-right: clamp(1.25rem, -2.8213rem + 17.3709vw, 12.8125rem);
+  padding-left: clamp(1.25rem, -2.8213rem + 17.3709vw, 12.8125rem);
 }
 
 .splash {
