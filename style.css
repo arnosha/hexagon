@@ -91,24 +91,6 @@ nav a:hover {
   max-width: 54rem;
 }
 
-@media (max-width: 900px) {
-  .about {
-    display: flex;
-    flex-direction: column;
-  }
-  .about-text {
-    padding-right: 0;
-  }
-
-  .about-cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: clamp(3.375rem, 1.5rem + 8vw, 6rem);
-    padding-bottom: 1rem;
-  }
-}
-
 .about-text-header {
   font-weight: 500;
   /* 48 to 32px */
@@ -259,7 +241,6 @@ nav a:hover {
 .how-it-works {
   background-color: #130606;
   height: 800px;
-  display: flex;
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -287,31 +268,42 @@ nav a:hover {
 .how-text {
   color: #ededed;
   padding: 124px 100px 0 100px;
+  /* 124 to 80px */
+  padding-top: clamp(5rem, 4.0317rem + 4.1315vw, 7.75rem);
+  /* 100 to 20px */
+  padding-left: clamp(1.25rem, -0.5106rem + 7.5117vw, 6.25rem);
+  padding-right: clamp(1.25rem, -0.5106rem + 7.5117vw, 6.25rem);
 }
 
 .how-text-header {
   font-weight: 500;
-  font-size: 48px;
+  /* 48 to 32px */
+  font-size: clamp(2rem, 1.6479rem + 1.5023vw, 3rem);
   line-height: 100%;
 }
 
 .how-text-text-one {
   padding-top: 80px;
   font-weight: 400;
-  font-size: 20px;
+  /* 20 to 14px */
+  font-size: clamp(0.875rem, 0.743rem + 0.5634vw, 1.25rem);
   line-height: 150%;
 }
 
 .how-text-text-two {
   padding-top: 20px;
   font-weight: 400;
-  font-size: 20px;
+  /* 20 to 14px */
+  font-size: clamp(0.875rem, 0.743rem + 0.5634vw, 1.25rem);
   line-height: 150%;
 }
 
 .how-cards-container {
   overflow: auto;
-  padding: 20px 100px 20px 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /* 100 to 20px */
+  padding-right: clamp(1.25rem, -0.5106rem + 7.5117vw, 6.25rem);
   gap: 20px;
   display: flex;
   flex-direction: column;
@@ -323,7 +315,7 @@ nav a:hover {
 }
 
 .how-card-text {
-  border: 1px solid var(--Gray, #747578);
+  border: 1px solid #747578;
   box-shadow: 0px 2px 4px 0px #00000033;
   color: #747578;
   border-radius: 30px;
@@ -333,13 +325,15 @@ nav a:hover {
 
 .how-card-text p:nth-child(1) {
   font-weight: 700;
-  font-size: 28px;
+  /* 28 to 20 px */
+  font-size: clamp(1.25rem, 1.0739rem + 0.7512vw, 1.75rem);
 }
 
 .how-card-text p:nth-child(2) {
   margin-top: 24px;
   font-weight: 400;
-  font-size: 20px;
+  /* 20 to 14px */
+  font-size: clamp(0.875rem, 0.743rem + 0.5634vw, 1.25rem);
   line-height: 150%;
 }
 
@@ -443,4 +437,46 @@ nav a:hover {
   list-style: none;
   display: flex;
   justify-content: space-evenly;
+}
+
+@media (max-width: 900px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-text {
+    padding-right: 0;
+  }
+
+  .about-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: clamp(3.375rem, 1.5rem + 8vw, 6rem);
+    padding-bottom: 1rem;
+  }
+
+  .how-it-works {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .how-cards-container {
+    flex-direction: row;
+    padding: 40px;
+  }
+
+  .how-card {
+    flex-direction: column;
+    min-width: 350px;
+  }
+
+  .how-card-text {
+    min-height: 270px;
+  }
+
+  .how-card img {
+    max-width: fit-content;
+    align-self: center;
+  }
 }
