@@ -41,14 +41,33 @@ nav a:hover {
 }
 
 .hero {
-  min-height: 400px;
   text-align: center;
   align-content: center;
   /* 64 to 30 px */
   font-size: clamp(1.875rem, 1.1268rem + 3.1925vw, 4rem);
   font-weight: 500;
+}
+
+.hero-text {
   padding-right: clamp(1.25rem, -2.8213rem + 17.3709vw, 12.8125rem);
   padding-left: clamp(1.25rem, -2.8213rem + 17.3709vw, 12.8125rem);
+  /* 124 to 80px */
+  padding-top: clamp(5rem, 4.0317rem + 4.1315vw, 7.75rem);
+}
+
+.hero-desktop {
+  width: 100%;
+  max-width: 1400px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.hero-mobile {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .accent {
@@ -378,6 +397,12 @@ nav a:hover {
   min-height: 850px;
   background-color: #ffffff;
   padding: 124px 100px 220px 100px;
+  /* 124 to 80px */
+  padding-top: clamp(5rem, 4.0317rem + 4.1315vw, 7.75rem);
+  /* 220 to 100 */
+  padding-bottom: clamp(6.25rem, 3.6092rem + 11.2676vw, 13.75rem);
+  padding-left: clamp(1.5625rem, -0.088rem + 7.0423vw, 6.25rem);
+  padding-right: clamp(1.5625rem, -0.088rem + 7.0423vw, 6.25rem);
   display: flex;
 }
 
@@ -394,7 +419,8 @@ nav a:hover {
 .support-wrapper p {
   padding: 32px 0 74px 0;
   font-weight: 500;
-  font-size: 64px;
+  /* 64 to 32 */
+  font-size: clamp(2rem, 1.2958rem + 3.0047vw, 4rem);
   line-height: 100%;
 }
 
@@ -478,5 +504,25 @@ nav a:hover {
   .how-card img {
     max-width: fit-content;
     align-self: center;
+  }
+
+  .uni-svg {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-desktop {
+    display: none;
+  }
+
+  .hero-mobile {
+    display: block;
+  }
+}
+
+@media (max-width: 1000px) {
+  .buttons ul {
+    flex-direction: column;
   }
 }
