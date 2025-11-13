@@ -535,3 +535,7 @@ nav a:hover {
     display: block;
   }
 }
+
+.concept {
+  padding: 50px 100px;
+}
